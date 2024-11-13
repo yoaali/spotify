@@ -11,12 +11,32 @@
     crossorigin="anonymous" />
   <link rel="stylesheet" href="styles/stylesheet.css" />
 </head>
-<body>
+<body class="bg-dark text-light">
+    <!-- playlist header -->
+     <header class="container-fluid">
+        <!-- playlist image -->
+        <img src="/images/placeholder.jpg" alt="playlist image" class="img-fluid" />
+        <!-- playlist information -->
+        <!-- Action buttons -->
+        <!-- Song information row -->
+    </header>
     <!-- Songs -->
-     <?php 
-     include 'songs.php';
+     <main class="container-fluid" id="songs">
+        
+        <?php 
+        include 'songs.php';
 
-     ?>
+        ?>
+    </main>
+
+    <!-- Media controls -->
+     <footer class="footer fixed-bottom bg-dark">
+
+
+        <!-- Progress bar -->
+
+        
+     </footer>
 
     <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
