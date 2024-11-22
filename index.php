@@ -14,7 +14,7 @@ function create_song($index)
     $song_artist = $songs[$index]['artist'];
     $song_duration = $songs[$index]['duration'];
 
-    echo "<div class=\"d-flex gap-3 align-items-center\">";
+    echo "<div class=\"song-row d-flex gap-3 border-bottom align-items-center\">";
     echo "<img class=\"song-cover\" src=\"$song_image\" />";
     echo "<p> $song_title </p>";
     echo "<p> $song_album </p>";
@@ -48,6 +48,17 @@ function create_song($index)
     </header>
     <!-- Songs -->
     <main class="container-fluid" id="songs">
+        <div
+            id="song-info-row"
+            class="container-fluid text-light text-center border-top border-bottom border-dark py-1">
+            <div class="row">
+                <small class="col-1 px-0">#</small>
+                <small class="col text-start">Title</small>
+                <small class="col-md-3 col-lg-2 d-none d-md-block text-start">Album</small>
+                <small class="col-lg-2 d-none d-lg-block text-start">Artist</small>
+                <small class="col-2 px-0"><i class="bi bi-clock-fill"></i></small>
+            </div>
+        </div>
         <?php
         for ($i = 0; $i < count($songs); $i++) {
             create_song($i);
@@ -56,8 +67,8 @@ function create_song($index)
     </main>
 
     <!-- Media controls -->
-    <footer class="footer fixed-bottom bg-dark">
-        <div class="container text-center py-2">
+    <footer class="container-fluid footer fixed-bottom bg-dark">
+        <div class="text-center py-2">
             <button class="btn btn-pb-previous" type="button" aria-label="Shuffle">
                 <i class="bi bi-shuffle text-secondary"></i>
             </button>
@@ -76,7 +87,9 @@ function create_song($index)
         </div>
 
         <!-- Progress bar -->
-
+        <div class="progress" role="progressbar" aria-label="primary example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar text-bg-primary" style="width: 25%">25%</div>
+        </div>
 
     </footer>
 

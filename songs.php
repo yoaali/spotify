@@ -1,13 +1,6 @@
 <?php
 $songs = [
     [
-        'cover' => ' ',
-        'title' => 'Highway to Hell',
-        'album' => 'Highway to Hell',
-        'artist' => 'AC/DC',
-        'duration' => '3:28',
-    ],
-    [
         'cover' => 'images/ACDC.jpeg',
         'title' => 'Highway to Hell',
         'album' => 'Highway to Hell',
